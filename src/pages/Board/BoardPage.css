@@ -1,0 +1,131 @@
+.board {
+    min-height: 100vh;
+    width: 100%;
+    background: #0d0d1f;
+    padding: 32px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #e0e0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.board__header {
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.board__titulo {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 4px;
+    background: linear-gradient(90deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.board__subtitulo {
+    margin: 0;
+    color: #555577;
+    font-size: 13px;
+}
+
+.board__columnas {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;   /* columnas todas la misma altura */
+    flex: 1;                /* ocupa todo el espacio vertical restante */
+    overflow-x: auto;
+    padding-bottom: 16px;
+}
+
+.board__loading,
+.board__error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #0d0d1f;
+    color: #aaaacc;
+    font-size: 16px;
+}
+
+/* Modal */
+.modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: #1a1a2e;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal__titulo {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0f0f0;
+}
+
+.modal__input {
+    background: #12122a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 12px;
+    color: #e0e0f0;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal__textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.modal__input:focus {
+    outline: none;
+    border-color: #a78bfa;
+}
+
+.modal__actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.modal__btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.modal__btn--cancelar {
+    background: rgba(255,255,255,0.05);
+    color: #aaaacc;
+}
+
+.modal__btn--crear {
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    color: white;
+}
+
+.modal__btn--crear:hover {
+    opacity: 0.9;
+}

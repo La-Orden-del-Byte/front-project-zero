@@ -1,0 +1,77 @@
+.column {
+    background: #13132b;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;              /* cada columna ocupa el mismo ancho disponible */
+    min-width: 220px;     /* no se achican demasiado */
+    height: 100%;         /* llena la altura del contenedor */
+}
+
+.column__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 16px;
+    border-bottom: 2px solid var(--columna-color);
+    flex-shrink: 0;
+}
+
+.column__icon {
+    font-size: 16px;
+}
+
+.column__label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e0e0f0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    flex: 1;
+}
+
+.column__count {
+    background: rgba(255,255,255,0.08);
+    color: #aaaacc;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.column__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    overflow-y: auto;    /* scroll interno si hay muchas tarjetas */
+    flex: 1;             /* ocupa todo el espacio vertical disponible */
+}
+
+.column__empty {
+    text-align: center;
+    color: #44445a;
+    font-size: 12px;
+    padding: 24px 0;
+    font-style: italic;
+}
+
+.column__btn-agregar {
+    margin: 10px 12px 12px;
+    background: transparent;
+    border: 1px dashed rgba(255,255,255,0.1);
+    color: #555577;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    flex-shrink: 0;
+}
+
+.column__btn-agregar:hover {
+    border-color: var(--columna-color);
+    color: var(--columna-color);
+    background: rgba(255,255,255,0.03);
+}
