@@ -64,7 +64,7 @@ function BoardPage() {
 
     return (
         <div className="board">
-            <header className="board__header">
+            <header className="board__header" >
                 <h1 className="board__titulo">Proyecto Zero</h1>
                 <p className="board__subtitulo">Tu mapa de consumo cultural</p>
             </header>

@@ -36,7 +36,7 @@ const useBoardStore = create((set, get) => ({
 
     // Mueve una tarjeta a otro estado (POR EJEMPLO DE VIENDO A TERMINADO)
     moverTarjeta: async (id, nuevoEstado) => {
-        await updateCard(id, {estad: nuevoEstado})
+        await updateCard(id, {estado: nuevoEstado})
         set({
             tarjetas: get().tarjetas.map((t) =>
                 t.id === id
